@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: elearning-headless-service
+  labels:
+    app: elearning
+spec:
+  # CRITICAL: Setting clusterIP to None makes this a headless service
+  clusterIP: None 
+  selector:
+    app: elearning
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      
+    

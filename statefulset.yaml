@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: elearning-statefulset
+
+spec:
+  selector:
+    matchLabels:
+      app: elearning
+
+  serviceName: "elearning"
+  replicas: 3 # by default is 1
+
+  minReadySeconds: 10 # by default is 0
+  template:
+    metadata:
+      labels:
+        app: elearning # has to match .spec.selector.matchLabels
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: elearning
+        image: smartcloud2022/elearning:v1
+        ports:
+        - containerPort: 80
+          name: elearning
+        

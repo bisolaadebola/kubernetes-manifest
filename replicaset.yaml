@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: elearning-relpica
+  labels:
+    app: elearning
+
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  
+  selector:
+    matchLabels:
+      app: elearning
+  template:
+    metadata:
+      labels:
+        app: elearning
+
+    spec:
+      containers:
+      - name: elearning
+        image: smartcloud2022/elearning:v1
+        ports:
+        - containerPort: 80

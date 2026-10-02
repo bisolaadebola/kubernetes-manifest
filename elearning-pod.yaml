@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: elearning-pod
+spec:
+  containers:
+    - name: elearning
+      image: smartcloud2022/elearning:v1
+      ports:
+      - containerPort: 80
