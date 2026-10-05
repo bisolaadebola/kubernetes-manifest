@@ -1,9 +1,4 @@
 
----
-
-# Step 3 — Update `lessons-learned.md`
-
-Use this:
 
 ```markdown
 # Lessons Learned
