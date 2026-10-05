@@ -1,10 +1,10 @@
-# Deployment Guide
+# Kubernetes Deployment Guide
 
 ## Prerequisites
 
-The following environment was used for this project:
+The project was completed using:
 
-- AWS EC2 instance
+- AWS EC2
 - Ubuntu Linux
 - Kubernetes
 - kubectl
@@ -12,11 +12,11 @@ The following environment was used for this project:
 - Git
 - GitHub
 
-## 1. Connect to the Kubernetes Cluster
+---
 
-The Kubernetes cluster is running on an AWS EC2 instance.
+## 1. Verify the Kubernetes Cluster
 
-Verify that kubectl can communicate with the cluster:
+Check that the Kubernetes node is available:
 
 ```bash
 kubectl get nodes

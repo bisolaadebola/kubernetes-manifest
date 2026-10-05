@@ -2,13 +2,27 @@
 
 ## Overview
 
-This project uses Kubernetes to deploy and manage application workloads on an AWS EC2 instance.
+This project demonstrates how Kubernetes resources work together to deploy, manage, replicate, and expose an application.
 
-The Kubernetes cluster is managed using `kubectl` and monitored through Free Lens.
+The Kubernetes environment was deployed on an AWS EC2 Ubuntu instance and managed using `kubectl`. Free Lens was used to monitor and interact with the Kubernetes cluster.
 
-The project demonstrates several Kubernetes resources and how they work together to run, replicate, expose, and manage applications.
+The project focuses on Kubernetes workloads and networking components, including:
+
+- Pods
+- ReplicaSets
+- Deployments
+- StatefulSets
+- Kubernetes Services
+- ClusterIP
+- Headless Services
+- NodePort
+- Kubernetes networking and service discovery
+
+---
 
 ## Environment
+
+The project was built using:
 
 - AWS EC2
 - Ubuntu Linux
@@ -16,17 +30,22 @@ The project demonstrates several Kubernetes resources and how they work together
 - kubectl
 - Free Lens
 - YAML manifests
-- Git and GitHub
+- Git
+- GitHub
 
-## Kubernetes Resources
+---
 
-The project currently includes the following Kubernetes resources:
+## Kubernetes Workloads
 
 ### Pod
 
-The Pod is the basic execution unit in Kubernetes and is used to run the application container.
+A Pod is the smallest deployable unit in Kubernetes.
 
-Manifest:
+The project includes an example Pod manifest used to understand how a containerized application runs inside Kubernetes.
+
+Example:
 
 ```text
-manifests/elearning-pod.yaml
+Pod
+└── Container
+    └── Application
